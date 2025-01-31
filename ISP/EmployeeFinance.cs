@@ -13,6 +13,10 @@ namespace Design_Principle_In_CSharp.OCP
     public interface IEmployeeFinance : IEmployeeRewards
     {
         double CalculatePay(Employee emp);
+    }
+
+    public interface IStockOptions : IEmployeeFinance
+    {
         double CalculateStockOptions(Employee emp);
     }
 
@@ -33,11 +37,6 @@ namespace Design_Principle_In_CSharp.OCP
         {
             return 100;
         }
-
-        public double CalculateStockOptions(Employee emp)
-        {
-            throw new NotImplementedException();
-        }
     }
     public class EmployeeFinanceForFTE : IEmployeeFinance
     {
@@ -48,11 +47,6 @@ namespace Design_Principle_In_CSharp.OCP
         public double CalculateRewards(Employee emp)
         {
             return 200;
-        }
-
-        public double CalculateStockOptions(Employee emp)
-        {
-            throw new NotImplementedException();
         }
     }
 
@@ -67,11 +61,6 @@ namespace Design_Principle_In_CSharp.OCP
         {
             return 100;
         }
-
-        public double CalculateStockOptions(Employee emp)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     public class EmployeeFinanceForContractor : IEmployeeRewards
@@ -82,7 +71,7 @@ namespace Design_Principle_In_CSharp.OCP
         }
     }
 
-    public class EmployeeFinanceForCLevel : IEmployeeFinance
+    public class EmployeeFinanceForCLevel : IStockOptions
     {
         public double CalculatePay(Employee emp)
         {
