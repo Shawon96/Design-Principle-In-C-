@@ -24,7 +24,7 @@ namespace Design_Principle_In_CSharp.OCP
 
         public Employee GetCurrentLogedInUser()
         {
-            return new Employee();
+            return new Employee(new FileLogger());
         }
     }
 }
