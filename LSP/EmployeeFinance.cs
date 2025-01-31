@@ -5,17 +5,20 @@ using System.Threading.Tasks;
 
 namespace Design_Principle_In_CSharp.OCP
 {
-    public class EmployeeFinance
+
+    public class EmployeeReWards
+    {
+        public virtual double CalculateRewards(Employee emp)
+        {
+            return 100;
+        }
+    }
+    public class EmployeeFinance : EmployeeReWards
     {
         public virtual double CalculatePay(Employee emp)
         {
 
             return 10;
-        }
-
-        public virtual double CalculateRewards(Employee emp)
-        {
-            return 100;
         }
     }
 
@@ -46,13 +49,8 @@ namespace Design_Principle_In_CSharp.OCP
         }
     }
 
-    public class EmployeeFinanceForContractor : EmployeeFinance
+    public class EmployeeFinanceForContractor : EmployeeReWards
     {
-        public override double CalculatePay(Employee emp)
-        {
-            throw new NotImplementedException();
-        }
-
         public override double CalculateRewards(Employee emp)
         {
             return 300;

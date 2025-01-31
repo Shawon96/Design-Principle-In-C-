@@ -22,8 +22,7 @@ EmployeeFinance employeeFinanceForPTE = new EmployeeFinanceForPTE();
 var totalPayPTE = employeeFinanceForPTE.CalculatePay(empPTE);
 var totalRewardsForPTE = employeeFinanceForFTE.CalculateRewards(empPTE);
 
-EmployeeFinance employeeFinanceForContractor = new EmployeeFinanceForContractor();
-var totalPayContractor = employeeFinanceForContractor.CalculatePay(empPTE);
+EmployeeReWards employeeFinanceForContractor = new EmployeeFinanceForContractor();
 var totalRewardsForContractor = employeeFinanceForContractor.CalculateRewards(empPTE);
 
 
@@ -31,6 +30,6 @@ Console.WriteLine("Total Paid to Full Time Employee " + totalPay);
 Console.WriteLine("Total Rewards to Full Time Employee " + totalRewards);
 Console.WriteLine("Total Paid to Part Time Employee " + totalPayPTE);
 Console.WriteLine("Total Rewards to Part Time Employee " + totalRewardsForPTE);
-Console.WriteLine("Total Paid to Contractor Employee " + totalPayContractor);
+// Console.WriteLine("Total Paid to Contractor Employee " + totalPayContractor);
 Console.WriteLine("Total Rewards to Contractor Employee " + totalRewardsForContractor);
 
