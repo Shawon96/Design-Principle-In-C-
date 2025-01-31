@@ -7,6 +7,7 @@ namespace Design_Principle_In_CSharp.SRP
 {
     public class Employee
     {
+
         public void Save(Employee emp)
         {
             try
