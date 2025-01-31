@@ -7,7 +7,7 @@ namespace Design_Principle_In_CSharp.OCP
 {
     public class EmployeeFinance
     {
-        public double CalculatePay(Employee emp)
+        public virtual double CalculatePay(Employee emp)
         {
             if (emp.EmployeeType == EmployeeType.FullTime.ToString())
             {
@@ -23,6 +23,31 @@ namespace Design_Principle_In_CSharp.OCP
             }
 
             return 10;
+        }
+    }
+
+
+    public class EmployeeFinanceForFTE : EmployeeFinance
+    {
+        public override double CalculatePay(Employee emp)
+        {
+            return emp.TotalHoursWorked * 10;
+        }
+    }
+
+    public class EmployeeFinanceForPTE : EmployeeFinance
+    {
+        public override double CalculatePay(Employee emp)
+        {
+            return emp.TotalHoursWorked * 5;
+        }
+    }
+
+    public class EmployeeFinanceForContractor : EmployeeFinance
+    {
+        public override double CalculatePay(Employee emp)
+        {
+            return emp.TotalHoursWorked * 15;
         }
     }
 }
