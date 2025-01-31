@@ -7,23 +7,23 @@ namespace Design_Principle_In_CSharp.OCP
 {
     public class AuthManager
     {
-        public void Login()
-        {
-            // Login the user
-        }
-        public void Logout()
-        {
-            // Logout the User
-        }
+        // public void Login()
+        // {
+        //     // Login the user
+        // }
+        // public void Logout()
+        // {
+        //     // Logout the User
+        // }
 
-        public Boolean IsCurrentUserAuthenticated()
-        {
-            //Wheter the Current User is authenticated or not
-        }
+        // public Boolean IsCurrentUserAuthenticated()
+        // {
+        //     //Wheter the Current User is authenticated or not
+        // }
 
-        public Employee GetCurrentLogedInUser()
-        {
-            //Get The Current Logged in User details
-        }
+        // public Employee GetCurrentLogedInUser()
+        // {
+        //     //Get The Current Logged in User details
+        // }
     }
 }

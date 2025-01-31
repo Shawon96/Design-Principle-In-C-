@@ -7,6 +7,8 @@ namespace Design_Principle_In_CSharp.OCP
 {
     public class Employee
     {
+        public string EmployeeType { get; set; }
+        public double TotalHoursWorked { get; set; }
         public void Save(Employee emp)
         {
             try
@@ -19,5 +21,12 @@ namespace Design_Principle_In_CSharp.OCP
                 logger.LogError(ex.Message);
             }
         }
+    }
+
+    public enum EmployeeType
+    {
+        FullTime,
+        PartTime,
+        Contractor
     }
 }
